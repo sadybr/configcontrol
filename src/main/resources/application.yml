@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /controlconfig
+
+springdoc:
+  swagger-ui:
+    path: /
+
+spring:
+  application:
+    name: config-control
+
+jpa:
+  properties:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.h2
+
+datasource:
+  url: jdbc:h2:mem:testdb
+  username: sa
+  password:
+
+jwt:
+  secret: mySecretKeyThatIsNotSoSecret_2
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: config-control
